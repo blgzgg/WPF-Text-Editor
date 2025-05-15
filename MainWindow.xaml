@@ -1,0 +1,28 @@
+﻿<Window x:Class="BrianGrassiChallengeM8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrianGrassiChallengeM8"
+        mc:Ignorable="d"
+        Title="Plain Text Editor" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Header="_New" Click="NewClick"/>
+                <MenuItem Header="_Open" Click="OpenClick"/>
+                <MenuItem Header="_Save" Click="SaveClick"/>
+                <MenuItem Header="Save _As" Click="SaveAsClick"/>
+                <Separator/>
+                <MenuItem Header="_Exit" Click="ExitClick"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Click="AboutClick"/>
+            </MenuItem>
+        </Menu>
+
+        <TextBox x:Name="textBox" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" 
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                 TextChanged="textBox_TextChanged" Margin="0,18,0,0"/>
+    </Grid>
+</Window>
